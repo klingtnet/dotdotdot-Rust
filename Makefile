@@ -8,7 +8,7 @@ all: slides.html
 node_modules:
 	npm install
 
-slides.html: node_modules slides.md
+slides.html: node_modules slides.md slides.css
 	$(CLEAVER) $(CLEAVER_OPTS) slides.md
 
 open: slides.html
