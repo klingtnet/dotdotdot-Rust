@@ -1,24 +1,30 @@
 .PHONY: clean clean-all watch open
 
-CLEAVER:=node_modules/cleaver/bin/cleaver
-CLEAVER_OPTS:=
+REVEAL_VER:=3.2.0
+STATIC:=--self-contained
+PANDOC_OPTS:=--standalone\
+	--mathjax\
+	--variable theme:night\
+	--variable transition:slide\
+	--variable fragments:false\
+	--variable transitionSpeed:fast\
+	--incremental\
+	--to revealjs
 
 all: slides.html
 
-node_modules:
-	npm install
+reveal.js:
+	curl -Ls "https://github.com/hakimel/reveal.js/archive/$(REVEAL_VER).tar.gz" | tar -xvzf -
+	ln -sf reveal.js-$(REVEAL_VER) reveal.js
 
-slides.html: node_modules slides.md slides.css
-	$(CLEAVER) $(CLEAVER_OPTS) slides.md
+slides.html: reveal.js slides.md
+	pandoc $(PANDOC_OPTS) slides.md --output $@
 
 open: slides.html
 	xdg-open $<
 
-watch: slides.md
-	$(CLEAVER) watch slides.md &> cleaver.log &
-	
 clean:
-	rm slides.html
+	rm -f slides.html
 
 clean-all: clean
-	rm -rf node_modules
+	rm -rf reveal.js reveal.js-$(REVEAL_VER)

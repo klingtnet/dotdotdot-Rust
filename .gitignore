@@ -2,3 +2,6 @@ node_modules/
 *.swp
 *.html
 *.log
+reveal.js
+reveal.js*/
+*.xcf
