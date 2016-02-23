@@ -4,7 +4,7 @@ REVEAL_VER:=3.2.0
 STATIC:=--self-contained
 PANDOC_OPTS:=--standalone\
 	--mathjax\
-	--variable theme:night\
+	--variable theme:white\
 	--variable transition:slide\
 	--variable fragments:false\
 	--variable transitionSpeed:fast\
