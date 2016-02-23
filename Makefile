@@ -8,6 +8,7 @@ PANDOC_OPTS:=--standalone\
 	--variable transition:slide\
 	--variable fragments:false\
 	--variable transitionSpeed:fast\
+	--variable history\
 	--incremental\
 	--to revealjs
 
