@@ -1,7 +1,6 @@
-.PHONY: clean clean-all watch open
+.PHONY: clean clean-all watch open upload
 
 REVEAL_VER:=3.2.0
-STATIC:=--self-contained
 PANDOC_OPTS:=--standalone\
 	--mathjax\
 	--variable theme:white\
@@ -23,6 +22,12 @@ slides.html: reveal.js slides.md
 
 open: slides.html
 	xdg-open $<
+
+publish: PANDOC_OPTS += --self-contained
+publish: clean slides.html upload
+
+upload: slides.html
+	scp $< kn:/var/www/sites/files.klingt.net/slides/dotdotdot-Rust.html
 
 clean:
 	rm -f slides.html
