@@ -93,7 +93,7 @@ fn main() {
 - **concurrent**: no data races
 - **practical systems language**: low-level control like C, inline asm
 - [**zero-cost abstractions**](http://blog.rust-lang.org/2015/05/11/traits.html)
-    - parametric polymorphism
+    - parametric polymorphism (aka *generics*)
 	- iterators
 	- data race free concurrency
 
