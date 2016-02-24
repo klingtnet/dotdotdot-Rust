@@ -1,6 +1,6 @@
 # Rust talk
 
-This repository contains the slides for my Rust introduction talk that I gave at [dotdotdot](https://heartheartheart.club/) on February 24th, 2016.
+This repository contains the [slides](https://slides.klingt.net/dotdotdot-Rust.html) for my Rust introduction talk that I gave at [dotdotdot](https://heartheartheart.club/) on February 24th, 2016.
 
 ## Build
 
