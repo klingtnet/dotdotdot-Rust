@@ -94,7 +94,12 @@ fn main() {
 - **practical systems language**: low-level control like C, inline asm
 - [**zero-cost abstractions**](http://blog.rust-lang.org/2015/05/11/traits.html)
     - parametric polymorphism
-    - type classes aka generics
+	- iterators
+	- data race free concurrency
+
+---
+
+> C++ implementations obey the zero-overhead principle: What you don’t use, you don’t pay for [Stroustrup]
 
 # Zero-Cost Abstractions
 
