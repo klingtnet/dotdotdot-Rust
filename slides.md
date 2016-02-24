@@ -442,6 +442,15 @@ fn f(mutex: &Mutex<Vec<i32>>) {
 - stable, beta and nightly channel
 - set the channel: `multirust default stable`
 
+# Online Resources
+
+- [#rust](irc://irc.mozilla.org/rust) IRC
+- [users.rust-lang.org](http://users.rust-lang.org/) discourse forum
+- [/r/rust](https://www.reddit.com/r/rust/)
+- [arewewebyet](http://arewewebyet.com/), [areweideyet](http://areweideyet.com/)
+- [awesome-rust](https://github.com/kud1ing/awesome-rust)
+
+
 # Shameless Self-Promotion
 
 - writing my masters thesis (a realtime audio synthesizer in Rust)
