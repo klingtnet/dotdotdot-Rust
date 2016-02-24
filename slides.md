@@ -58,7 +58,6 @@ fn main() {
 // 10:21 error: use of moved value: `s` [E0382]
 ```
 
-
 # Control
 
 - memory location of a variable value
