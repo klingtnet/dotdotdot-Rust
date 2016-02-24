@@ -413,7 +413,8 @@ fn f(mutex: &Mutex<Vec<i32>>) {
 
 - work on the AST
 - generate valid code
-- TODO
+- expanded at compile time
+- naming scheme: `name!`
 
 # FFI
 
