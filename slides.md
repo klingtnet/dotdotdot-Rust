@@ -348,7 +348,7 @@ println!("{}", cl(3,2));
 
 ---
 
-- [playpen](http://is.gd/NeclpI)
+- [playpen](http://is.gd/StM1Wg)
 
 ```rust
 fn add<T: Add>(x: T, y: T) -> T::Output {
