@@ -213,7 +213,13 @@ fn main() {
 
 - a type with **variants**
 
-```enum
+```rust
+// a practical example
+enum Option<T> {
+    None,
+    Some(T),
+}
+
 // an arbitrary example
 enum ErrorKind {
 	Recoverable,
