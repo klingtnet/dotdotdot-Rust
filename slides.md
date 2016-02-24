@@ -250,7 +250,7 @@ fn f(e: ErrorKind) {
 if x < 42 {
 	println!("Not the answer to all questions, but close.");
 } else if x == 42 {
-	println!("You got it!);
+	println!("You got it!");
 } else {
 	println!("A bit too much.");
 }
