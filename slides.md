@@ -4,11 +4,11 @@
 
 # Agenda
 
-1. Language Goals and History
-1. How to get Rust
+1. History
 1. Concepts
-1. Syntax
-1. Examples
+1. Syntax / Language Features
+1. Concurrency / FFI
+1. Questions
 
 # History
 
