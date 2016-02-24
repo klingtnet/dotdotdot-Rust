@@ -173,43 +173,6 @@ fn main() {
 
 > Most languages attempt to deal with this problem through the 'mutable' part, but Rust deals with it by solving the 'shared' part.
 
-# Concurrency
-
-## Messaging (Message Passing)
-
-- pass ownership of messages between threads
-- transfer ownership of message to the channel
-	- sender can't access message after send
-- [playpen](http://is.gd/4L3WSz)
-
----
-
-## Shared read-only access
-
-- concurrent access to a large array (image, sound, etc.)
-- `Arc<T>` atomically reference counted
-	- `Rc<T>` is the non-thread safe equivalent, which can't be transferred between threads, because it doens't implement the `Send` trait
-	- non thread-safe types can't leave thread boundaries (checked at compile time)
-- `Arc` *owns* the data, only allows *shared reference* (not mutable), therefore no data races
-- [playpen](http://is.gd/4dHS1q)
-
----
-
-## Locked mutable access (mutexes)
-
-- concurrent writable access (synced via mutexes) to some data
-
-```rust
-fn f(mutex: &Mutex<Vec<i32>>) {
-	let mut guard = mutex.lock();
-	guard.push(42);
-	// lock is automatically released
-	// as soon as it gets out of scope
-}
-```
-
-- [playpen](http://is.gd/aY62sH)
-
 # Hello World
 
 - variable binding: `let x: i32 = 3;` (type can be inferred most of the time)
@@ -393,6 +356,43 @@ struct S<T: Foo> {
 	elements: Vec<Box<T>>,
 }
 ```
+
+# Concurrency
+
+## Messaging (Message Passing)
+
+- pass ownership of messages between threads
+- transfer ownership of message to the channel
+	- sender can't access message after send
+- [playpen](http://is.gd/4L3WSz)
+
+---
+
+## Shared read-only access
+
+- concurrent access to a large array (image, sound, etc.)
+- `Arc<T>` atomically reference counted
+	- `Rc<T>` is the non-thread safe equivalent, which can't be transferred between threads, because it doens't implement the `Send` trait
+	- non thread-safe types can't leave thread boundaries (checked at compile time)
+- `Arc` *owns* the data, only allows *shared reference* (not mutable), therefore no data races
+- [playpen](http://is.gd/4dHS1q)
+
+---
+
+## Locked mutable access (mutexes)
+
+- concurrent writable access (synced via mutexes) to some data
+
+```rust
+fn f(mutex: &Mutex<Vec<i32>>) {
+	let mut guard = mutex.lock();
+	guard.push(42);
+	// lock is automatically released
+	// as soon as it gets out of scope
+}
+```
+
+- [playpen](http://is.gd/aY62sH)
 
 # Macros
 
