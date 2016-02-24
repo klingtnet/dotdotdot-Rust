@@ -307,7 +307,7 @@ let avg = v.iter().fold(0.0, |acc, val| (acc + val)/l);
 
 # Traits
 
-- *composition* over inheritance (avoid the [diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem), [lwn](https://lwn.net/Articles/548560/))
+- *composition* over inheritance (avoid the [diamond problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem), [LWN article](https://lwn.net/Articles/548560/))
 - you can think of *traits* as *interfaces*
 - traits can be implemented on *structs* using `impl TraitName`
 - [playpen](http://is.gd/BYH4F5)
