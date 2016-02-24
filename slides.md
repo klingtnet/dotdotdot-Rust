@@ -282,8 +282,8 @@ for c in v {
 # Iterators
 
 - iterators are lazy (evaluated when used)
-	- can be infinite, `(0..3).cycle()` is an iterators that yields `0,1,2,0,1,2,...`
-	- you have to *consume* the iterator to get the final result of some operation on set of values. The most common one is `collect()`, which consumes the whole iterator.
+	- can be infinite, `(0..3).cycle()` is an iterator that yields `0,1,2,0,1,2,...`
+	- you have to *consume* the iterator to get the final result of some operation on the set of values. The most common one is `collect()`, which consumes the whole iterator.
 - ranges are iterators too: `let v = (0..10).collect::<Vec<_>>::();`
 - for math geeks: [iterator cheatsheet](https://danielkeep.github.io/itercheat_baked.html)
 
