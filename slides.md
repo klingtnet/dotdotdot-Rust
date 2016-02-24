@@ -242,7 +242,7 @@ fn f(e: ErrorKind) {
 }
 ```
 
-# if
+# if-else if-else
 
 - nothing unusual
 
