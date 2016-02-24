@@ -22,15 +22,15 @@
 
 ---
 
-- *C-like* languages (C, C++, D, ...):
-    - more control over low-level resource management
+- **C-like** languages (C, C++, D, ...):
+    - **more control** over low-level resource management
 		 - flat data structures, raw pointers
     - less safe than managed languages
-- *Managed* languages (Python, Ruby, Haskell, Java ...):
-    - less control
+- **Managed** languages (Python, Ruby, Haskell, Java ...):
+    - **less control**
 		- no flat data structures, string has always length and char elements etc.
     - more safety
-- *Rust*:
+- **Rust**:
     - balance safety and control
 
 # Safety
