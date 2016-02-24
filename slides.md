@@ -47,8 +47,7 @@ int main(void) {
 }
 ```
 
-- not possible in Rust, compiler keeps track of object lifetime
-- [playpen](https://play.rust-lang.org/)
+- not possible in Rust, compiler keeps track of object lifetime ([playpen](https://play.rust-lang.org/))
 
 ```rust
 fn main() {
