@@ -326,7 +326,16 @@ impl Area for Rect {
 
 # Closures
 
-- TODO
+- functions are first-class language elements
+- closures come in three flavours: `FnOnce`, `Fn`, `FnMut`
+    - you won't use `FnOnce` directly, at least not very often
+- [playpen](http://is.gd/kXWNFl)
+
+```rust
+let cl = |x, y| {x+y};
+println!("{}", cl(3,2));
+```
+
 
 # Generics
 
